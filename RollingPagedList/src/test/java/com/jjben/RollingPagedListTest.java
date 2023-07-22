@@ -30,6 +30,9 @@ public class RollingPagedListTest {
 
 	System.out.println("Newest entry in the list : " + list.getNewestEntry());
 
+	System.out.println("List ASC : " + list.getEntriesOrderedByDateAsc());
+	System.out.println("List DESC : " + list.getEntriesOrderedByDateDesc());
+
     }
 
 }

@@ -3,12 +3,8 @@ package com.jjben;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class RollingPagedList<T> {
-
-    private static final Logger LOGGER = Logger.getLogger(RollingPagedList.class.getName());
 
     private List<T>[] pages;
 
@@ -47,9 +43,6 @@ public class RollingPagedList<T> {
 	}
 
 	addNewFirtPage();
-
-	LOGGER.log(Level.FINEST, "New Page Added " + currentPagesSize);
-
     }
 
     private void addNewFirtPage() {
@@ -95,7 +88,6 @@ public class RollingPagedList<T> {
     public List<T> getEntriesOrderedByDateDesc() {
 
 	List<T> entries = getEntriesOrderedByDateAsc();
-
 	Collections.reverse(entries);
 
 	return entries;
